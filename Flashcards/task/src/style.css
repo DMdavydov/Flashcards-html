@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Secular+One&display=swap');
+
+.main {
+    background-image: url(world.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
+h1 {
+    text-align: center;
+    color: #01060c;
+    font-family: 'Secular One', sans-serif;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 300px 300px 300px;
+    grid-template-rows: 350px 350px;
+    justify-content: center;
+    grid-gap: 5px;
+}
+
+.card:hover {
+    transform: rotateY(180deg);
+}
+
+.item {
+    height: 250px;
+    width: 250px;
+    position: relative;
+    border-radius: 8px;
+}
+
+.card {
+    perspective: 1000px;
+    height: 100%;
+    width: 100%;
+    transition: all 1s linear;
+    font-family: 'Sansita Swashed', cursive;
+    transform-style: preserve-3d;
+}
+
+.front, .back {
+    position: absolute;
+    font-size: 3em;
+    display: flex;
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Lobster', cursive;
+}
+
+.front {
+    background: linear-gradient(blueviolet, aqua);
+    z-index: 2;
+    backface-visibility: hidden;
+}
+
+.back {
+    background: linear-gradient(#e7980c, #da1ee0);
+    z-index: 1;
+    transform: rotateY(180deg);
+}
